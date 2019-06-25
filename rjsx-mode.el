@@ -1339,8 +1339,7 @@ Fixes:
 
 (defun rjsx--indent-line-1 ()
   "Helper for `rjsx-indent-line'."
-  (let* ((indent-tabs-mode nil)
-         (cur-pos (point))
+  (let* ((cur-pos (point))
          (cur-char (char-after cur-pos))
          (node (js2-node-at-point (- cur-pos rjsx--indent-running-offset)))
          (parent (js2-node-parent node)))
